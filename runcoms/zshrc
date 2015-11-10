@@ -11,3 +11,56 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+
+###############   User configuration    #########################
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+#
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Default Editor. Make sure both EDITOR and VISUAL vars set to vim 
+export EDITOR='vim'
+export VISUAL='vim'
+
+#
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+#
+
+
+###############################################
+
+eval "$(rbenv init - zsh)"
+
+HISTFILESIZE=1000
+PROMPT_COMMAND='echo "$(history 1 | grep "defaults")" | sed '/^$/d' >> ~/Dropbox/CLI/command_defaults.txt'
+
+# function s
+
+function m() { open /Applications/Safari.app/ "http://www.macmillandictionary.com/us/dictionary/american/$1"; }
+
+function w() { open /Applications/Safari.app/ "http://www.merriam-webster.com/dictionary/$1"; }
+
+function i() { open /Applications/Safari.app/ "http://www.iciba.com/$1"; }
+
+function google() { open /Applications/Safari.app/ "https://www.google.com/search?q=$1"; }
+
+################################################
+
+# tmux alias
+alias pbr='tmux new-session -s pianobar'
+alias pb='tmux attach-session -t pianobar'
+
+# alias 
+alias dl='cd ~/Downloads'
+alias mdl='cd ~/Movies/dl'
+alias you-get='python3 ~/dev/repository/you-get/you-get'
+alias dns='sudo killall -HUP mDNSResponder && say flushed'

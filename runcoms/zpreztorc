@@ -26,15 +26,15 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
-  'editor' \
-  'git' \
-  'homebrew' \
   'osx' \
   'history' \
+  'history-substring-search' \
   'directory' \
   'spectrum' \
   'utility' \
+  'homebrew' \
   'completion' \
+  'git' \
   'prompt'
 
 #
@@ -42,7 +42,7 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'vi'
+#zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
@@ -52,7 +52,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 #
 
 # Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
+ zstyle ':prezto:module:git:status:ignore' submodules 'all'
 
 #
 # GNU Utility
@@ -88,7 +88,8 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'peepcode' "$"
+#zstyle ':prezto:module:prompt' theme 'peepcode' "$"
+zstyle ':prezto:module:prompt' theme 'sorin1'
 
 #
 # Ruby
@@ -102,10 +103,10 @@ zstyle ':prezto:module:prompt' theme 'peepcode' "$"
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:screen:auto-start' local 'yes'
+ zstyle ':prezto:module:screen:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:screen:auto-start' remote 'yes'
+ zstyle ':prezto:module:screen:auto-start' remote 'yes'
 
 #
 # SSH
@@ -120,12 +121,12 @@ zstyle ':prezto:module:prompt' theme 'peepcode' "$"
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'cursor' \
-#   'root'
+ zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'cursor' \
+   'root'
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \

@@ -89,7 +89,7 @@ zstyle ':prezto:load' pmodule \
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 #zstyle ':prezto:module:prompt' theme 'peepcode' "$"
-zstyle ':prezto:module:prompt' theme 'sorin1'
+zstyle ':prezto:module:prompt' theme 'damoekri1'
 
 #
 # Ruby

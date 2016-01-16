@@ -64,3 +64,6 @@ alias dl='cd ~/Downloads'
 alias mdl='cd ~/Movies/dl'
 alias you-get='python3 ~/dev/repository/you-get/you-get'
 alias dns='sudo killall -HUP mDNSResponder && say flushed'
+alias mkdate='mkdir $(date '+%Y-%b-%d')'
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
+
